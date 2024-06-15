@@ -1,68 +1,67 @@
-# <p align="center" style="padding: 0; margin: 0;"> Telegram Bot Project </p>
+# Telegram Bot
 
-This project provides a basic Telegram bot implementation designed to help others create and understand Telegram bots. The bot responds to the `/start` command and the message "start bot", offering a simple interactive experience.
+This repository contains the source code for a simple Telegram bot built using the `Telebot` librarie. The bot can handle basic commands and provide information about itself.
 
-## Features 🎉
-- Responds to the `/start` command
-- Responds to the message "start bot"
-- Sends a welcome message with a custom keyboard
+## Features
 
-## Installation Requirements 📦
+- **/start**: Start the bot and display a welcome message with a custom keyboard.
+- **/about**: Display information about the bot.
+- **/help**: Provide a list of available commands.
+- Handles text commands through buttons in the custom keyboard.
 
-To install the required packages, run the following command:
+## Prerequisites
 
-```sh
-pip install -r requirements.txt
-```
+To run this bot, you need to have Python installed on your system. You will also need to create a bot on Telegram and obtain an API key.
 
-## Setup 🛠️
+## Installation
 
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/yourusername/telegram-bot.git
-   cd telegram-bot
-   ```
+1. **Clone the repository:**
 
-2. **Create and activate a virtual environment (optional but recommended)**
-   ```sh
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+    ```sh
+    git clone https://github.com/D8Programmer/Simple_Telegram_Bot.git
+    cd telegram-bot
+    ```
 
-3. **Install the required packages**
-   ```sh
-   pip install -r requirements.txt
-   ```
+2. **Create a virtual environment and activate it (optional but recommended):**
 
-4. **Set up your environment variables**
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-   Create a `.env` file in the root of your project and add your Telegram API key:
-   ```dotenv
-   TELEGRAM_API_KEY='your_telegram_api_key'
-   ```
+3. **Install the required packages:**
 
-5. **Run the bot**
-   ```sh
-   python bot.py
-   ```
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-## Code Explanation 🧩
+4. **Create a `.env` file in the project directory and add your Telegram API key:**
 
-- **Environment Variables:** The `dotenv` package loads environment variables from a `.env` file, keeping sensitive information like the API key secure.
+    ```plaintext
+    # Replace with your actual Telegram API key obtained from BotFather
+    TELEGRAM_API_KEY='your_actual_api_key_here'
+    ```
 
-- **Bot Initialization:** The bot is initialized using the `TeleBot` class from the `telebot` package, with the API key retrieved from environment variables.
+## Usage
 
-- **Logging:** Basic logging is configured to monitor the bot's activity and log any errors.
+1. **Run the bot:**
 
-- **Command Handling:** The bot listens for the `/start` command and messages containing "start bot", responding with a custom keyboard and a welcome message.
+    ```sh
+    python bot.py
+    ```
 
-- **Polling:** The bot starts polling for new messages, with any exceptions logged for debugging purposes.
+2. **Interact with the bot on Telegram:**
 
-## Additional Resources 📚
+    - **/start**: Initializes the bot and displays a custom keyboard with options.
+    - **/about**: Provides information about the bot.
+    - **/help**: Lists available commands.
 
-- [Telegram Bot API Documentation](https://core.telegram.org/bots/api)
-- [pyTelegramBotAPI Documentation](https://github.com/eternnoir/pyTelegramBotAPI)
+## Project Structure
 
----
-
-<p align="center">For any questions or further assistance, feel free to reach out.</p>
+```plaintext
+telegram-bot/
+│
+├── bot.py            # Main script for the bot
+├── .env              # Environment variables
+├── requirements.txt  # Dependencies
+└── README.md         # Project documentation
